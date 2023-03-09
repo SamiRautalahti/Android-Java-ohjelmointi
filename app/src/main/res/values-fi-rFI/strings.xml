@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android_sovellus</string>
+    <string name="todo">TODO</string>
+    <string name="hello">Terve</string>
+    <string name="start">ALOITA</string>
+</resources>

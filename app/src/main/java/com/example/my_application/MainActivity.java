@@ -26,9 +26,17 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                textView2.setText(R.string.app_name);
+                textView2.setText(R.string.hello);
 
-                textView2.setVisibility(View.INVISIBLE);
+                //kerta painallus piilottaa tekstin
+                //textView2.setVisibility(View.INVISIBLE);
+
+                //näyttää ja piilottaa TextView-elementin tervehdystekstin kun buttonia klikataan
+                if (textView2.getVisibility() == View.VISIBLE){
+                    textView2.setVisibility(View.GONE);
+                }
+                else
+                    textView2.setVisibility(View.VISIBLE);
 
                 Log.i(TAG, "Game button clicked");
             }

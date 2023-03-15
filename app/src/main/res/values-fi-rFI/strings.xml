@@ -4,4 +4,6 @@
     <string name="todo">TODO</string>
     <string name="hello">Terve</string>
     <string name="start">ALOITA</string>
+    <string name="button2">PELI</string>
+    <string name="button3">PELAA UUDESTAAN</string>
 </resources>

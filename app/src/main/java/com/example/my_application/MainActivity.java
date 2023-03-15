@@ -1,5 +1,6 @@
 package com.example.my_application;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private Button button1;
     private TextView textView2;
 
+    private Button button2;
+
     public static final String TAG ="MainActivity";
 
     @Override
@@ -22,8 +25,23 @@ public class MainActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button1);
 
-        final Button button = findViewById(R.id.button1);
-        button.setOnClickListener(new View.OnClickListener() {
+        textView2 = findViewById(R.id.textView2);
+
+        button2 = findViewById(R.id.button2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "Game started");
+                openMinigame();
+            }
+
+        });
+
+
+
+
+        button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
                 textView2.setText(R.string.hello);
@@ -42,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        textView2 = findViewById(R.id.textView2);
 
+
+    }
+
+    public void openMinigame(){
+        Intent intent=new Intent(this,MainActivity2.class);
+        startActivity(intent);
     }
 }

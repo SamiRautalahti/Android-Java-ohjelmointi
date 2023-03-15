@@ -1,8 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/my_image"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/my_image"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/my_image"
+        app:layout_constraintBottom_toTopOf="@+id/flow2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/my_image"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="imageView4,imageView2,imageView3,imageView"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

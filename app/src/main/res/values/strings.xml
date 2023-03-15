@@ -3,4 +3,6 @@
     <string name="todo">TODO</string>
     <string name="hello">Hello</string>
     <string name="start">START</string>
+    <string name="button2">GAME</string>
+    <string name="button3">PLAY AGAIN</string>
 </resources>

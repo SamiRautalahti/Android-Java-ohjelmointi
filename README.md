@@ -4,10 +4,16 @@ Tässä repositoriossa on kaikki kurssin aikana tehdyt tehtävät. AL00CM26-3001
 
 Tähän mennessä tehdyt (kurssin alustava aikataulu):
 
-vko 8: AndroidStudio-ohjelman asennus. Projektin luonti, asetukset ja rakenne. Sovelluksen ajaminen, emulaattorin käyttäminen.
 
-vko 10: Asettelutiedostot res/layout -hakemistossa, asettelumallit, click-tapahtuman käsittely
+•	vko 8: AndroidStudio-ohjelman asennus. Projektin luonti, asetukset ja rakenne. Sovelluksen ajaminen, emulaattorin käyttäminen.
 
-vko 10: Moodle-tehtävät (kieliversiot, lokitulostus, sovelluksen ikoni, onclick-tapahtuma)
+•	vko 10: Asettelutiedostot res/layout -hakemistossa, asettelumallit, click-tapahtuman käsittely
+
+•	vko 10: Moodle-tehtävät (kieliversiot, lokitulostus, sovelluksen ikoni, onclick-tapahtuma)
+
+•	vko 11: Intent, animaatiot, manifestitiedosto, Guess-tehtävä
+
+•	vko 11: Guess-tehtävä ja Bottom Navigation Activity
+
 
 Mikäli tulee mitään kysyttävää niin ota ihmeessä yhteyttä: sami.rautalahti@student.lab.fi

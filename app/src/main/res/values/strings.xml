@@ -1,15 +1,16 @@
 <resources>
     <string name="app_name">Android_Application</string>
     <string name="todo">TODO</string>
-    <string name="hello">Hello</string>
+    <string name="hello">Hello!</string>
     <string name="start">START</string>
     <string name="button2">GAME</string>
     <string name="button3">PLAY AGAIN</string>
     <string name="Gamedemo">GAMEDEMO</string>
     <string name="Diamond">You found the diamond!</string>
     <string name="title_activity_main3">MainActivity3</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">My Application</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="Score">Score:</string>
+    <string name="Gamescore"></string>
 </resources>

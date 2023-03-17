@@ -26,6 +26,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     int HighestSuccessCount;
 
+    private TextView  scoreKentta;
+
     private static final String KEY_HS = "HighestScore";
 
     SharedPreferences myPreferences;
@@ -54,6 +56,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         int randomnumber = rand.nextInt(4);
 
+        setScore();
+
         kortti1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,11 +71,13 @@ public class MainActivity2 extends AppCompatActivity {
                     Diamond.setVisibility(View.VISIBLE);
 
                     adcount();
+                    setScore();
 
                 }
                 else {
                     kortti1.setImageResource(R.drawable.incorrect);
                     clickCount = clickCount-1;
+                    kortti1.setClickable(false);
                 }
             }
         });
@@ -88,12 +94,14 @@ public class MainActivity2 extends AppCompatActivity {
                     Diamond.setVisibility(View.VISIBLE);
 
                     adcount();
+                    setScore();
 
 
                 }
                 else {
                     kortti2.setImageResource(R.drawable.incorrect);
                     clickCount = clickCount-1;
+                    kortti2.setClickable(false);
                 }
             }
         });
@@ -110,12 +118,14 @@ public class MainActivity2 extends AppCompatActivity {
                     Diamond.setVisibility(View.VISIBLE);
 
                     adcount();
+                    setScore();
 
 
                 }
                 else {
                     kortti3.setImageResource(R.drawable.incorrect);
                     clickCount = clickCount-1;
+                    kortti3.setClickable(false);
                 }
             }
         });
@@ -132,12 +142,14 @@ public class MainActivity2 extends AppCompatActivity {
                     Diamond.setVisibility(View.VISIBLE);
 
                     adcount();
+                    setScore();
 
 
                 }
                 else {
                     kortti4.setImageResource(R.drawable.incorrect);
                     clickCount = clickCount-1;
+                    kortti4.setClickable(false);
                 }
             }
         });
@@ -165,4 +177,10 @@ public class MainActivity2 extends AppCompatActivity {
         myEditor.putInt(KEY_HS, HighestSuccessCount);
         myEditor.commit();
     }
+    void setScore(){
+        scoreKentta=findViewById(R.id.Gamescore);
+        String score = String.valueOf(HighestSuccessCount);
+        scoreKentta.setText(score);
+    }
+
 }

@@ -2,15 +2,16 @@
 <resources>
     <string name="app_name">Android_sovellus</string>
     <string name="todo">TODO</string>
-    <string name="hello">Terve</string>
+    <string name="hello">Hyvää päivää!</string>
     <string name="start">ALOITA</string>
     <string name="button2">PELI</string>
     <string name="button3">PELAA UUDESTAAN</string>
-    <string name="Gamedemo">Pelidemo</string>
+    <string name="Gamedemo">Etsi timantti</string>
     <string name="Diamond">Löysit timantin!</string>
     <string name="title_activity_main3">MainActivity3</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Android_sovellus</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Ilmoitustaulu</string>
     <string name="Score">Pisteet:</string>
+    <string name="Gamescore"></string>
 </resources>

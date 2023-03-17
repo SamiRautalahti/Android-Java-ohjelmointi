@@ -176,6 +176,7 @@ public class MainActivity2 extends AppCompatActivity {
         SharedPreferences.Editor myEditor = myPreferences.edit();
         myEditor.putInt(KEY_HS, HighestSuccessCount);
         myEditor.commit();
+
     }
     void setScore(){
         scoreKentta=findViewById(R.id.Gamescore);

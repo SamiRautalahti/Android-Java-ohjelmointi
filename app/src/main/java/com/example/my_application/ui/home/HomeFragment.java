@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
                 } else
                     textView2.setVisibility(View.VISIBLE);
 
-                Log.i(TAG, "Game button clicked");
+                Log.i(TAG, "Start button clicked");
             }
         });
 

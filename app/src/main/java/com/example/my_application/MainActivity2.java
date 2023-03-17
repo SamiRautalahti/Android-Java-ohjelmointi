@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,10 +22,21 @@ public class MainActivity2 extends AppCompatActivity {
 
     private TextView Diamond;
 
+    int clickCount = 4;
+
+    int HighestSuccessCount;
+
+    private static final String KEY_HS = "HighestScore";
+
+    SharedPreferences myPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        HighestSuccessCount = myPreferences.getInt(KEY_HS, clickCount);
 
         Diamond = findViewById(R.id.Diamond);
         Diamond.setVisibility(View.GONE);
@@ -53,9 +66,12 @@ public class MainActivity2 extends AppCompatActivity {
 
                     Diamond.setVisibility(View.VISIBLE);
 
+                    adcount();
+
                 }
                 else {
                     kortti1.setImageResource(R.drawable.incorrect);
+                    clickCount = clickCount-1;
                 }
             }
         });
@@ -71,10 +87,13 @@ public class MainActivity2 extends AppCompatActivity {
 
                     Diamond.setVisibility(View.VISIBLE);
 
+                    adcount();
+
 
                 }
                 else {
                     kortti2.setImageResource(R.drawable.incorrect);
+                    clickCount = clickCount-1;
                 }
             }
         });
@@ -90,10 +109,13 @@ public class MainActivity2 extends AppCompatActivity {
 
                     Diamond.setVisibility(View.VISIBLE);
 
+                    adcount();
+
 
                 }
                 else {
                     kortti3.setImageResource(R.drawable.incorrect);
+                    clickCount = clickCount-1;
                 }
             }
         });
@@ -109,10 +131,13 @@ public class MainActivity2 extends AppCompatActivity {
 
                     Diamond.setVisibility(View.VISIBLE);
 
+                    adcount();
+
 
                 }
                 else {
                     kortti4.setImageResource(R.drawable.incorrect);
+                    clickCount = clickCount-1;
                 }
             }
         });
@@ -132,5 +157,12 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(getIntent());
             }
         });
+        }
+    public void adcount(){
+        HighestSuccessCount = HighestSuccessCount + clickCount;
+
+        SharedPreferences.Editor myEditor = myPreferences.edit();
+        myEditor.putInt(KEY_HS, HighestSuccessCount);
+        myEditor.commit();
     }
 }

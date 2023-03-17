@@ -6,4 +6,10 @@
     <string name="start">ALOITA</string>
     <string name="button2">PELI</string>
     <string name="button3">PELAA UUDESTAAN</string>
+    <string name="Gamedemo">Pelidemo</string>
+    <string name="Diamond">Löysit timantin!</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

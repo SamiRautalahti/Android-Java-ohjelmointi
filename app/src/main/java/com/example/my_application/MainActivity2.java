@@ -10,37 +10,52 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity2 extends AppCompatActivity {
+
+    private FloatingActionButton fab;
+
+    private TextView Diamond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        Diamond = findViewById(R.id.Diamond);
+        Diamond.setVisibility(View.GONE);
+
         ImageView kortti1=findViewById(R.id.imageView4);
         ImageView kortti2=findViewById(R.id.imageView2);
         ImageView kortti3=findViewById(R.id.imageView3);
         ImageView kortti4=findViewById(R.id.imageView);
 
-        Button button3 = findViewById(R.id.button3);
+        fab = findViewById(R.id.fab);
 
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.anime);
 
         Random rand = new Random();
 
-        int randomnumber = rand.nextInt(5);
+        int randomnumber = rand.nextInt(4);
 
         kortti1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 kortti1.startAnimation(animation);
-                if(randomnumber == 1){
+                if(randomnumber == 0){
                     kortti1.setImageResource(R.drawable.diamond);
-                    kortti2.setVisibility(View.INVISIBLE);
-                    kortti3.setVisibility(View.INVISIBLE);
-                    kortti4.setVisibility(View.INVISIBLE);
+                    kortti2.setVisibility(View.VISIBLE);
+                    kortti3.setVisibility(View.VISIBLE);
+                    kortti4.setVisibility(View.VISIBLE);
 
+                    Diamond.setVisibility(View.VISIBLE);
+
+                }
+                else {
+                    kortti1.setImageResource(R.drawable.incorrect);
                 }
             }
         });
@@ -48,12 +63,18 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 kortti2.startAnimation(animation);
-                if(randomnumber == 2){
+                if(randomnumber == 1){
                     kortti2.setImageResource(R.drawable.diamond);
-                    kortti1.setVisibility(View.INVISIBLE);
-                    kortti3.setVisibility(View.INVISIBLE);
-                    kortti4.setVisibility(View.INVISIBLE);
+                    kortti1.setVisibility(View.VISIBLE);
+                    kortti3.setVisibility(View.VISIBLE);
+                    kortti4.setVisibility(View.VISIBLE);
 
+                    Diamond.setVisibility(View.VISIBLE);
+
+
+                }
+                else {
+                    kortti2.setImageResource(R.drawable.incorrect);
                 }
             }
         });
@@ -61,12 +82,18 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 kortti3.startAnimation(animation);
-                if(randomnumber == 3){
+                if(randomnumber == 2){
                     kortti3.setImageResource(R.drawable.diamond);
-                    kortti2.setVisibility(View.INVISIBLE);
-                    kortti1.setVisibility(View.INVISIBLE);
-                    kortti4.setVisibility(View.INVISIBLE);
+                    kortti2.setVisibility(View.VISIBLE);
+                    kortti1.setVisibility(View.VISIBLE);
+                    kortti4.setVisibility(View.VISIBLE);
 
+                    Diamond.setVisibility(View.VISIBLE);
+
+
+                }
+                else {
+                    kortti3.setImageResource(R.drawable.incorrect);
                 }
             }
         });
@@ -74,21 +101,35 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 kortti4.startAnimation(animation);
-                if(randomnumber == 4){
+                if(randomnumber == 3){
                     kortti4.setImageResource(R.drawable.diamond);
-                    kortti2.setVisibility(View.INVISIBLE);
-                    kortti3.setVisibility(View.INVISIBLE);
-                    kortti1.setVisibility(View.INVISIBLE);
+                    kortti2.setVisibility(View.VISIBLE);
+                    kortti3.setVisibility(View.VISIBLE);
+                    kortti1.setVisibility(View.VISIBLE);
 
+                    Diamond.setVisibility(View.VISIBLE);
+
+
+                }
+                else {
+                    kortti4.setImageResource(R.drawable.incorrect);
                 }
             }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
+        /*button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = getIntent();
                 finish();
                 startActivity(intent);
+            }
+        });*/
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(getIntent());
             }
         });
     }

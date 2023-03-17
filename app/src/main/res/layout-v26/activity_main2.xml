@@ -77,9 +77,8 @@
         android:layout_margin="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:contentDescription="string/restart"
-        android:src="@drawable/redo"
-        android:scaleType="fitCenter"
+        android:contentDescription="string/refresh"
+        android:src="@drawable/refresh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText,ImageContrastCheck" />
@@ -91,11 +90,10 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/Gamedemo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        tools:layout_editor_absoluteY="58dp"
         tools:ignore="MissingConstraints" />
 
     <TextView

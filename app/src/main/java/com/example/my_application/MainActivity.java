@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //näyttää ja piilottaa TextView-elementin tervehdystekstin kun buttonia klikataan
                 if (textView2.getVisibility() == View.VISIBLE){
-                    textView2.setVisibility(View.GONE);
+                    textView2.setVisibility(View.INVISIBLE);
                 }
                 else
                     textView2.setVisibility(View.VISIBLE);

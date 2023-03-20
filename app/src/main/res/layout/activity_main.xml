@@ -25,8 +25,8 @@
 
     <ImageView
         android:id="@+id/image1"
-        android:layout_width="413dp"
-        android:layout_height="319dp"
+        android:layout_width="423dp"
+        android:layout_height="331dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/my_image"
         android:visibility="visible"

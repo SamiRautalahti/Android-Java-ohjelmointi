@@ -167,6 +167,9 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 finish();
                 startActivity(getIntent());
+                SharedPreferences.Editor editor = myPreferences.edit();
+                editor.putInt(KEY_HS, 0);
+                editor.apply();
             }
         });
         }

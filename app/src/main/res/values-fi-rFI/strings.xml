@@ -14,8 +14,8 @@
     <string name="title_notifications">Ilmoitukset</string>
     <string name="Score">Pisteet:</string>
     <string name="Gamescore"></string>
-    <string name="Latitude">Leveys</string>
-    <string name="Longitude">Pituus</string>
+    <string name="Latitude">Leveysaste</string>
+    <string name="Longitude">Pituusaste</string>
     <string name="Address">Osoite</string>
     <string name="Location">Näytä kartalla</string>
     <string name="Yourlocation">Sijaintitietosi</string>

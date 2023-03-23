@@ -117,7 +117,6 @@ public class DashboardFragment extends Fragment {
 
             }
 
-
             public void onStatusChanged(String provider, int status, Bundle extras) {
             }
 

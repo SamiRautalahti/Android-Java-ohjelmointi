@@ -115,7 +115,6 @@ public class DashboardFragment extends Fragment {
                 lastLocation = location;
 
             }
-            //testiä
 
             public void onStatusChanged(String provider, int status, Bundle extras) {
             }

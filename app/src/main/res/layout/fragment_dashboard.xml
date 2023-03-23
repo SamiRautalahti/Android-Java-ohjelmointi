@@ -13,7 +13,8 @@
         android:layout_height="75dp"
         android:text="@string/Yourlocation"
         android:autoSizeTextType="uniform"
-        android:gravity="center"/>
+        android:gravity="center"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -46,6 +47,7 @@
 </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldAddressField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Address"
@@ -70,7 +72,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/locationButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Location" />

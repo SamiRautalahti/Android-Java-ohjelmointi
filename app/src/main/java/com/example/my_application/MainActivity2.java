@@ -1,12 +1,16 @@
 package com.example.my_application;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -170,6 +174,8 @@ public class MainActivity2 extends AppCompatActivity {
                 SharedPreferences.Editor editor = myPreferences.edit();
                 editor.putInt(KEY_HS, 0);
                 editor.apply();
+                Log.i(TAG, "Game restart button clicked");
+
             }
         });
         }

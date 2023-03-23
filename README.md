@@ -15,5 +15,6 @@ Tähän mennessä tehdyt (kurssin alustava aikataulu):
 
 •	vko 11: Guess-tehtävä ja Bottom Navigation Activity
 
+•	vko 12: Laitteen sijainnin hakeminen
 
 Mikäli tulee mitään kysyttävää niin ota ihmeessä yhteyttä: sami.rautalahti@student.lab.fi

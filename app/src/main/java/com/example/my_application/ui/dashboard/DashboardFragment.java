@@ -114,6 +114,7 @@ public class DashboardFragment extends Fragment {
                 addressField.setText(getAddress(location));
                 lastLocation = location;
 
+
             }
 
 

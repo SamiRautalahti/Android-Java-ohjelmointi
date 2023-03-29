@@ -32,6 +32,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     private TextView  scoreKentta;
 
+    private TextView scoreKentta2;
+
     private static final String KEY_HS = "HighestScore";
 
     SharedPreferences myPreferences;
@@ -186,11 +188,14 @@ public class MainActivity2 extends AppCompatActivity {
         myEditor.putInt(KEY_HS, HighestSuccessCount);
         myEditor.commit();
 
+
     }
     void setScore(){
         scoreKentta=findViewById(R.id.Gamescore);
+        scoreKentta2=findViewById(R.id.Highscore);
         String score = String.valueOf(HighestSuccessCount);
         scoreKentta.setText(score);
+        scoreKentta2.setText(score);
     }
 
 }

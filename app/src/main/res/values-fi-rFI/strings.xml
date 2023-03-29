@@ -13,6 +13,8 @@
     <string name="title_dashboard">Raportointinäkymä</string>
     <string name="title_notifications">Ilmoitukset</string>
     <string name="Score">Pisteet:</string>
+    <string name="Hscore">Huippu pisteet:</string>
+    <string name="Highscore"></string>
     <string name="Gamescore"></string>
     <string name="Latitude">Leveysaste</string>
     <string name="Longitude">Pituusaste</string>

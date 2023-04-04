@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Gamedemo"
         app:layout_constraintVertical_bias="0.967"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,VisualLintOverlap" />
 
     <TextView
         android:id="@+id/Gamedemo"
@@ -44,6 +44,7 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/Gamedemo"
+        android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -59,6 +60,7 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/Diamond"
+        android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -84,48 +86,62 @@
         app:layout_constraintVertical_bias="0.994"
         tools:ignore="UnusedAttribute" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:scaleType="centerCrop"
         android:contentDescription="TODO"
         android:src="@drawable/my_image"
+        android:background="@null"
         tools:ignore="ContentDescription,HardcodedText"
         tools:layout_editor_absoluteX="306dp"
         tools:layout_editor_absoluteY="731dp" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
         android:src="@drawable/my_image"
-        tools:ignore="ContentDescription"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="242dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.353"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView3"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
         android:src="@drawable/my_image"
         app:layout_constraintBottom_toTopOf="@+id/flow2"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck"
         tools:layout_editor_absoluteX="53dp" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView4"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginStart="72dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
         android:src="@drawable/my_image"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ContentDescription"
-        tools:layout_editor_absoluteY="200dp" />
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteY="160dp" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow2"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="400dp"
+        android:paddingTop="16dp"
         android:orientation="horizontal"
         app:constraint_referenced_ids="imageView4,imageView2,imageView3,imageView"
         app:flow_maxElementsWrap="2"
@@ -185,10 +201,12 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/Hscore"
+        android:textColor="#263238"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.156"
+        tools:ignore="UnusedAttribute" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

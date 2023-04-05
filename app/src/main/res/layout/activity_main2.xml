@@ -195,8 +195,8 @@
 
     <TextView
         android:id="@+id/Hscore"
-        android:layout_width="168dp"
-        android:layout_height="47dp"
+        android:layout_width="148dp"
+        android:layout_height="45dp"
         android:layout_marginStart="4dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"

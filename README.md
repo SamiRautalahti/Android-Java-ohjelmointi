@@ -17,4 +17,8 @@ Tähän mennessä tehdyt (kurssin alustava aikataulu):
 
 •	vko 12: Laitteen sijainnin hakeminen
 
+•	vko 13: Lähetyksen vastaanottaja (Broadcast Receiver)
+
+•	vko 14: Ajastin-tehtävä
+
 Mikäli tulee mitään kysyttävää niin ota ihmeessä yhteyttä: sami.rautalahti@student.lab.fi

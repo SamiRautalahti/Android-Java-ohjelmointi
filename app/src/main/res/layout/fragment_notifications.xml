@@ -4,7 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.notifications.NotificationsFragment">
+
+    <TextClock
+        android:id="@+id/text_clock"
+        android:layout_width="350dp"
+        android:layout_height="86dp"
+        android:autoSizeTextType="uniform"
+        android:format24Hour="dd.MM.yyyy k:mm"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/numberpicker_main_picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="396dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
 
     <TextView
         android:id="@+id/text_notifications"
@@ -15,8 +46,67 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_notifications"
+        tools:ignore="MissingConstraints"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/button4"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button4"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toEndOf="@+id/button1"
+            tools:layout_editor_absoluteY="403dp" />
+
+        <Button
+            android:id="@+id/button5"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button5"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="400dp" />
+
+        <Button
+            android:id="@+id/button6"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button6"
+            tools:layout_editor_absoluteX="272dp"
+            tools:layout_editor_absoluteY="403dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <NumberPicker
+        android:id="@+id/numberpicker_main_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
+
+    
+
 </androidx.constraintlayout.widget.ConstraintLayout>

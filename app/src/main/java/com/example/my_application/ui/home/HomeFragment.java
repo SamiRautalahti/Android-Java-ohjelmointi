@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
 
         textView2 = root.findViewById(R.id.textView2);
 
-        button2 = root.findViewById(R.id.button2);
+        button2 = root.findViewById(R.id.button4);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

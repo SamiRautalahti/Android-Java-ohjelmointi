@@ -11,9 +11,9 @@
     <string name="Gamedemo">GAMEDEMO</string>
     <string name="Diamond">You found the diamond!</string>
     <string name="title_activity_main3">MainActivity3</string>
-    <string name="title_home">My Application</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Location</string>
+    <string name="title_notifications">Timer</string>
     <string name="timer_default_text">Done!</string>
     <string name="Score">Score:</string>
     <string name="Hscore">Top Score:</string>

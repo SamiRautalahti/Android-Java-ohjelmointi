@@ -12,9 +12,9 @@
     <string name="Gamedemo">Etsi timantti</string>
     <string name="Diamond">Löysit timantin!</string>
     <string name="title_activity_main3">MainActivity3</string>
-    <string name="title_home">Android_sovellus</string>
-    <string name="title_dashboard">Raportointinäkymä</string>
-    <string name="title_notifications">Ilmoitukset</string>
+    <string name="title_home">Koti</string>
+    <string name="title_dashboard">Sijainti</string>
+    <string name="title_notifications">Ajastin</string>
     <string name="timer_default_text">Valmis!</string>
     <string name="Score">Pisteet:</string>
     <string name="Hscore">Huippu pisteet:</string>

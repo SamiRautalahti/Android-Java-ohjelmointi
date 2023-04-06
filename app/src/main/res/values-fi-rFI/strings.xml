@@ -15,6 +15,7 @@
     <string name="title_home">Android_sovellus</string>
     <string name="title_dashboard">Raportointinäkymä</string>
     <string name="title_notifications">Ilmoitukset</string>
+    <string name="timer_default_text">Valmis!</string>
     <string name="Score">Pisteet:</string>
     <string name="Hscore">Huippu pisteet:</string>
     <string name="Highscore"></string>

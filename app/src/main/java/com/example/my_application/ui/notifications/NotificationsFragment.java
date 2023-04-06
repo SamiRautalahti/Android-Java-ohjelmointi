@@ -95,7 +95,7 @@ public class NotificationsFragment extends Fragment {
                                     cdt = new CountDownTimer(timeLeftInMillis, 1000) {
                                         public void onTick(long millisUntilFinished) {
                                             timeLeftInMillis = millisUntilFinished;
-                                            timerCountDown.setText(""+millisUntilFinished / 1000);
+                                            timerCountDown.setText(""+millisUntilFinished / 1000 + " s");
                                         }
 
                                         public void onFinish() {
@@ -167,7 +167,7 @@ public class NotificationsFragment extends Fragment {
                                         cdt = new CountDownTimer(timeLeftInMillis, 1000) {
                                             public void onTick(long millisUntilFinished) {
                                                 timeLeftInMillis = millisUntilFinished;
-                                                timerCountDown.setText(""+millisUntilFinished / 1000);
+                                                timerCountDown.setText(""+millisUntilFinished / 1000 + " s");
                                             }
 
                                             public void onFinish() {

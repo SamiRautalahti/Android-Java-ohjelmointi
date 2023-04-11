@@ -99,7 +99,6 @@ public class NotificationsFragment extends Fragment {
                                         }
 
                                         public void onFinish() {
-                                            timerCountDown.setText("done!");
                                             // Set the text to show the end message
                                             timerCountDown.setText("done!");
 
@@ -128,7 +127,6 @@ public class NotificationsFragment extends Fragment {
                                         }
 
                                         public void onFinish() {
-                                            timerCountDown.setText("done!");
                                             // Set the text to show the end message
                                             timerCountDown.setText("done!");
 
@@ -171,7 +169,6 @@ public class NotificationsFragment extends Fragment {
                                             }
 
                                             public void onFinish() {
-                                                timerCountDown.setText("done!");
                                                 // Set the text to show the end message
                                                 timerCountDown.setText("done!");
 

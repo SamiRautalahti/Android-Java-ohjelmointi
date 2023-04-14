@@ -37,7 +37,6 @@ public class DataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
 
-
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             companyName = extras.getString("Value1");
@@ -59,8 +58,14 @@ public class DataActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray responseItems = (JSONArray) response.getJSONArray("results");
-                            Log.e(TAG,"Response: " + responseItems.length());
+                            JSONArray responseItems=(JSONArray) response.getJSONArray("results") ;
+
+                            for (int i = 0; i < responseItems.length(); i++) {
+                                JSONObject x=responseItems.getJSONObject(i);
+                                Log.i(TAG, String.valueOf(x.getString("name")));  //tulostaa hakuehdon täyttävien yritysten nimet consoliin
+                            }
+
+                            Log.e(TAG,String.valueOf(responseItems.length()));
                         } catch (JSONException e) {
                             throw new RuntimeException(e);
                         }
@@ -69,9 +74,11 @@ public class DataActivity extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e(TAG,"EI PERKELE TOIMI!");
+                        // TODO: Handle error
+
                     }
                 });
+
 
         jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
         requestQueue.add(jsonObjectRequest);

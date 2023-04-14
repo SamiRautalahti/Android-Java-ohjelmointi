@@ -9,6 +9,7 @@
     <string name="button4">ALOITA</string>
     <string name="button5">TAUKO</string>
     <string name="button6">PYSÄYTÄ</string>
+    <string name="button7">HAE</string>
     <string name="Gamedemo">Etsi timantti</string>
     <string name="Diamond">Löysit timantin!</string>
     <string name="title_activity_main3">MainActivity3</string>

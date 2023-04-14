@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,12 +18,18 @@ import com.example.my_application.MainActivity2;
 import com.example.my_application.R;
 import com.example.my_application.databinding.FragmentHomeBinding;
 
+import YTJ.DataActivity;
+
 public class HomeFragment extends Fragment {
 
     private Button button1;
     private TextView textView2;
 
     private Button button2;
+
+    private Button button5;
+
+    private EditText editText;
 
     public static final String TAG = "MainActivity";
 
@@ -42,6 +49,10 @@ public class HomeFragment extends Fragment {
 
         button2 = root.findViewById(R.id.button4);
 
+        button5 = root.findViewById(R.id.button5);
+
+        editText = root.findViewById(R.id.editText);
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +61,19 @@ public class HomeFragment extends Fragment {
             }
 
         });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "Data started");
+                Intent i = new Intent(view.getContext(), DataActivity.class);
+                Log.i(TAG, editText.getText().toString());
+                i.putExtra(editText.getText().toString(), "this is activity for value 1");
+                startActivity(i);
+            }
+        });
+
+
 
 
         button1.setOnClickListener(new View.OnClickListener() {

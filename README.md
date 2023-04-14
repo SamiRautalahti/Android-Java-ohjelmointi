@@ -21,4 +21,6 @@ Tähän mennessä tehdyt (kurssin alustava aikataulu):
 
 •	vko 14: Ajastin-tehtävä
 
+•	vko 15: Tietojen hakeminen YTJ-rajapinnasta
+
 Mikäli tulee mitään kysyttävää niin ota ihmeessä yhteyttä: sami.rautalahti@student.lab.fi

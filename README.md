@@ -23,4 +23,6 @@ Tähän mennessä tehdyt (kurssin alustava aikataulu):
 
 •	vko 15: Tietojen hakeminen YTJ-rajapinnasta
 
+•	vko 16: vko 16: Hakukentän toteutus YTJ-rajapintatehtävään
+
 Mikäli tulee mitään kysyttävää niin ota ihmeessä yhteyttä: sami.rautalahti@student.lab.fi

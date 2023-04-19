@@ -22,12 +22,12 @@ import YTJ.DataActivity;
 
 public class HomeFragment extends Fragment {
 
-    private Button button1;
+    private Button startButton;
     private TextView textView2;
 
-    private Button button2;
+    private Button gameButton;
 
-    private Button button5;
+    private Button searchButton;
 
     private EditText editText;
 
@@ -43,17 +43,17 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        button1 = root.findViewById(R.id.button1);
+        startButton = root.findViewById(R.id.startButton);
 
         textView2 = root.findViewById(R.id.textView2);
 
-        button2 = root.findViewById(R.id.button4);
+        gameButton = root.findViewById(R.id.gameButton);
 
-        button5 = root.findViewById(R.id.button5);
+        searchButton = root.findViewById(R.id.searchButton);
 
         editText = root.findViewById(R.id.editText);
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        gameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "Game started");
@@ -62,21 +62,18 @@ public class HomeFragment extends Fragment {
 
         });
 
-        button5.setOnClickListener(new View.OnClickListener() {
+        searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "Data started");
                 Intent i = new Intent(view.getContext(), DataActivity.class);
                 Log.i(TAG, editText.getText().toString());
-                i.putExtra(editText.getText().toString(), "this is activity for value 1");
+                i.putExtra("Value1", editText.getText().toString());
                 startActivity(i);
             }
         });
 
-
-
-
-        button1.setOnClickListener(new View.OnClickListener() {
+        startButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
                 textView2.setText(R.string.hello);

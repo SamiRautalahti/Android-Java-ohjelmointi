@@ -36,15 +36,10 @@ public class DataActivity extends AppCompatActivity {
 
     private static final String TAG = "DataActivity";
 
-    public RecyclerAdapter adapter;
-
-    public RecyclerView recyclerView;
-
-    private String businessId;
+    private RecyclerAdapter adapter;
+    private RecyclerView recyclerView;
     private String companyName;
-    private String registrationDate;
-    private String companyForm;
-    private String url= "http://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=50&resultsFrom=0&name=lappeen&companyRegistrationFrom=2000-01-01";
+    private String url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,14 +50,12 @@ public class DataActivity extends AppCompatActivity {
         if (extras != null) {
             companyName = extras.getString("Value1");
         }
-        String url ="http://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=50&resultsFrom=0&name="+ companyName +"&companyRegistrationFrom=1945-01-01";
+        url = "http://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=50&resultsFrom=0&name=" + companyName + "&companyRegistrationFrom=1945-01-01";
         Log.e(TAG, url);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-
-        APIGet(url);
 
         handleIntent(getIntent());
     }
@@ -76,8 +69,11 @@ public class DataActivity extends AppCompatActivity {
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            //use the query to search your data somehow
-
+            url = "http://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=50&resultsFrom=0&name=" + query + "&companyRegistrationFrom=1945-01-01";
+            Log.e(TAG, url);
+            APIGet(url);
+        } else {
+            APIGet(url);
         }
     }
 
@@ -97,22 +93,21 @@ public class DataActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                adapter.getFilter().filter(query);
-                Log.i(TAG, "a) ETSITÄÄN: "+ query);
+                // Do nothing here
                 return false;
             }
+
             @Override
             public boolean onQueryTextChange(String query) {
-                adapter.getFilter().filter(query);
-                Log.i(TAG, "b) ETSITÄÄN: "+ query);
+                // Do nothing here
                 return false;
             }
         });
+
         return true;
     }
 
-
-    void APIGet(String url){
+    void APIGet(String url) {
         RequestQueue requestQueue;
         requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
@@ -121,27 +116,25 @@ public class DataActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        ArrayList<Item> itemList= new ArrayList<Item>();
+                        ArrayList<Item> itemList = new ArrayList<Item>();
 
                         try {
-                            JSONArray responseItems=(JSONArray) response.getJSONArray("results");
-
+                            JSONArray responseItems = (JSONArray) response.getJSONArray("results");
 
                             for (int i = 0; i < responseItems.length(); i++) {
-                                JSONObject x=responseItems.getJSONObject(i);
+                                JSONObject x = responseItems.getJSONObject(i);
                                 Item item = new Item();
                                 item.name = x.getString("name");
-                                item.registrationDate= x.getString("registrationDate");
-                                item.companyForm=x.getString("companyForm");
-                                item.businessId=x.getString("businessId");
+                                item.registrationDate = x.getString("registrationDate");
+                                item.companyForm = x.getString("companyForm");
+                                item.businessId = x.getString("businessId");
 
                                 itemList.add(item);
 
                                 //Log.i(TAG, "Name: " + item.name + ", Registration Date: " + item.registrationDate + ", Company Form: " + item.companyForm + ", Business ID: " + item.businessId);
                             }
 
-
-                            Log.e(TAG,"Number of results: " + responseItems.length());
+                            Log.e(TAG, "Number of results: " + responseItems.length());
                             adapter = new RecyclerAdapter(itemList);
                             recyclerView.setAdapter(adapter);
 
@@ -166,4 +159,5 @@ public class DataActivity extends AppCompatActivity {
         jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(20 * 1000, 1, 1.0f));
         requestQueue.add(jsonObjectRequest);
     }
+
 }

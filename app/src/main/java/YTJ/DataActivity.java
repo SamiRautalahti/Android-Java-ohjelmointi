@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -123,13 +125,18 @@ public class DataActivity extends AppCompatActivity {
 
                                 itemList.add(item);
 
-
-
                                 //Log.i(TAG, "Name: " + item.name + ", Registration Date: " + item.registrationDate + ", Company Form: " + item.companyForm + ", Business ID: " + item.businessId);
                             }
 
 
                             Log.e(TAG,"Number of results: " + responseItems.length());
+                            adapter = new RecyclerAdapter(itemList);
+                            recyclerView.setAdapter(adapter);
+
+                            // Hide the progress bar
+                            ProgressBar progressBar = (ProgressBar) findViewById(R.id.simpleProgressBar);
+                            progressBar.setVisibility(View.INVISIBLE);
+
                         } catch (JSONException e) {
                             Log.e(TAG, "Error parsing JSON response: " + e.getMessage());
                         }

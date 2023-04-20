@@ -17,6 +17,7 @@
     <string name="title_notifications">Timer</string>
     <string name="timer_default_text">Done!</string>
     <string name="Score">Score:</string>
+    <string name="search"></string>
     <string name="Hscore">Top Score:</string>
     <string name="Highscore"></string>
     <string name="Gamescore"></string>

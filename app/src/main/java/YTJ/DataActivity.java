@@ -85,7 +85,6 @@ public class DataActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
-        inflater.inflate(R.menu.options_menu, menu);
 
         // Associate searchable configuration with the SearchView
         SearchManager searchManager =
@@ -95,9 +94,22 @@ public class DataActivity extends AppCompatActivity {
         searchView.setSearchableInfo(
                 searchManager.getSearchableInfo(getComponentName()));
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                adapter.getFilter().filter(query);
+                Log.i(TAG, "a) ETSITÄÄN: "+ query);
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String query) {
+                adapter.getFilter().filter(query);
+                Log.i(TAG, "b) ETSITÄÄN: "+ query);
+                return false;
+            }
+        });
         return true;
     }
-
 
 
     void APIGet(String url){

@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Aloitusmaksu"
+      tools:ignore="HardcodedText" />
+
+  <RadioGroup
+      android:id="@+id/start_rate_radio_group"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/start_rate_weekday_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="arkisin 4,50 €"
+        tools:ignore="HardcodedText" />
+
+    <RadioButton
+        android:id="@+id/start_rate_holiday_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pyhinä 7,50 €"
+        tools:ignore="HardcodedText" />
+
+  </RadioGroup>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Matkataksa"
+      tools:ignore="HardcodedText" />
+
+  <RadioGroup
+      android:id="@+id/price_rate_radio_group"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/price_rate_1_4_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1-4 henkilöä 1,90 €/km"
+        tools:ignore="HardcodedText" />
+
+    <RadioButton
+        android:id="@+id/price_rate_5_8_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5-8 henkilöä 2,50 €/km"
+        tools:ignore="HardcodedText" />
+
+  </RadioGroup>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Matkan pituus (km)"
+      tools:ignore="HardcodedText" />
+
+  <EditText
+      android:id="@+id/distance_edit_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:autofillHints=""
+      android:inputType="numberDecimal"
+      android:minHeight="48dp"
+      tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+  <Button
+      android:id="@+id/calculate_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Laske hinta"
+      tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+  <TextView
+      android:id="@+id/price_text_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textSize="24sp" />
+
+  <TextView
+      android:id="@+id/hintaTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="24sp"
+      android:paddingTop="16dp"/>
+
+  <Spinner
+      android:id="@+id/matkanPituusSpinner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:minHeight="48dp"
+      android:visibility="invisible" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Matkustajien määrä"
+      tools:ignore="HardcodedText" />
+
+  <Spinner
+      android:id="@+id/matkustajienMaaraSpinner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:minHeight="48dp" />
+
+</LinearLayout>
+

@@ -9,6 +9,8 @@
     <string name="button5">PAUSE</string>
     <string name="button6">STOP</string>
     <string name="button7">SEARCH</string>
+    <string name="button8">TAX</string>
+    <string name="calculate">CALCULATE PRICE</string>
     <string name="Gamedemo">GAMEDEMO</string>
     <string name="Diamond">You found the diamond!</string>
     <string name="title_activity_main3">MainActivity3</string>

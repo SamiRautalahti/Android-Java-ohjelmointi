@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.my_application.MainActivity2;
 import com.example.my_application.R;
+import com.example.my_application.TaxiFareCalculator;
 import com.example.my_application.databinding.FragmentHomeBinding;
 
 import YTJ.DataActivity;
@@ -28,6 +29,8 @@ public class HomeFragment extends Fragment {
     private Button gameButton;
 
     private Button searchButton;
+
+    private Button taksibutton;
 
     private EditText editText;
 
@@ -53,6 +56,8 @@ public class HomeFragment extends Fragment {
 
         editText = root.findViewById(R.id.editText);
 
+        taksibutton = root.findViewById(R.id.taksibutton);
+
         gameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +65,15 @@ public class HomeFragment extends Fragment {
                 openMinigame();
             }
 
+        });
+
+        taksibutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.i(TAG, "Taxi started");
+                openTaxi();
+            }
         });
 
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -107,4 +121,10 @@ public class HomeFragment extends Fragment {
         Intent intent=new Intent(getActivity(),MainActivity2.class);
         startActivity(intent);
     }
+
+    public void openTaxi(){
+        Intent intent=new Intent(getActivity(), TaxiFareCalculator.class);
+        startActivity(intent);
+    }
+
 }

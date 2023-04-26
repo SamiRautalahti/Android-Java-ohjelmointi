@@ -1,5 +1,6 @@
 package com.example.my_application;
 
+import static android.content.ContentValues.TAG;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button2;
 
+    private Button taksibutton;
+
+
     public static final String TAG ="MainActivity";
 
     @Override
@@ -28,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         textView2 = findViewById(R.id.textView2);
 
         button2 = findViewById(R.id.button4);
+
+        taksibutton = findViewById(R.id.taksibutton);
+
+
+        taksibutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "Taxi started");
+            }
+        });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,4 +82,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(this,MainActivity2.class);
         startActivity(intent);
     }
-}
+
+    public void openTaxi(){
+        Intent intent=new Intent(this,TaxiFareCalculator.class);
+        startActivity(intent);
+}}

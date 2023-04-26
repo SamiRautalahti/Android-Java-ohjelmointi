@@ -67,4 +67,15 @@
         app:layout_constraintTop_toBottomOf="@+id/button1"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
+    <Button
+        android:id="@+id/taksibutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738"
+        tools:layout_editor_absoluteX="26dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

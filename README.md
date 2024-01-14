@@ -4,7 +4,6 @@ Tässä repositoriossa on kaikki kurssin aikana tehdyt tehtävät. AL00CM26-3001
 
 Tähän mennessä tehdyt (kurssin alustava aikataulu):
 
-
 •	vko 8: AndroidStudio-ohjelman asennus. Projektin luonti, asetukset ja rakenne. Sovelluksen ajaminen, emulaattorin käyttäminen.
 
 •	vko 10: Asettelutiedostot res/layout -hakemistossa, asettelumallit, click-tapahtuman käsittely
@@ -24,5 +23,3 @@ Tähän mennessä tehdyt (kurssin alustava aikataulu):
 •	vko 15: Tietojen hakeminen YTJ-rajapinnasta
 
 •	vko 16: vko 16: Hakukentän toteutus YTJ-rajapintatehtävään
-
-Mikäli tulee mitään kysyttävää niin ota ihmeessä yhteyttä: sami.rautalahti@student.lab.fi
